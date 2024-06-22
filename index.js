@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const app = express();
 const fs = require('fs')
+const port = process.env.PORT || 3000;
 
 app.use(express.json())
 app.use(express.urlencoded({extended : true}))
@@ -45,6 +46,6 @@ app.post('/create' , (req,res) =>{
 })
 
 
-app.listen(8004 , () =>{
+app.listen(port , () =>{
     console.log('done');
 })
